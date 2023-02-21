@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export const Container = ({ children, className }) => {
   return (
-    <div className={ classNames(style.container, className) }>
+    <div className={ classNames(className, style.container) }>
       { children }
     </div>
   )
