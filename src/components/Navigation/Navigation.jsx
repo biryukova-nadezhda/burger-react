@@ -14,7 +14,7 @@ export const Navigation = () => {
       <Container className={style.container}>
         <ul className={style.list}>
           {category.map((item, i) => (
-            <li className={style.item}>
+            <li key={ i } className={ style.item }>
               <button
                 className={classNames(
                   style.button,
