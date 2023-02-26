@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import {API_URI, POSTFIX} from '../../const';
+import { API_URI, POSTFIX } from '../../const';
 
 const initialState = {
   category: [],

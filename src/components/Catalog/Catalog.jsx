@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {productRequestAsync} from '../../store/product/productSlice';
+import { productRequestAsync } from '../../store/product/productSlice';
 import { CatalogProduct } from '../CatalogProduct/CatalogProduct';
 import { Container } from '../Container/Container';
 import { Order } from '../Order/Order';
