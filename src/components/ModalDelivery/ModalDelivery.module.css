@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  z-index: 999;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
@@ -67,7 +68,6 @@
 
 }
 
-
 .fieldset {
   display: flex;
   flex-wrap: wrap;
@@ -82,11 +82,9 @@
   align-items: flex-start;
 }
 
-
 .fieldset_hide {
   visibility: hidden;
 }
-
 
 .input {
   width: 100%;
@@ -184,6 +182,13 @@
   color: #ACACAC;
 }
 
+.error {
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  color: #000;
+}
 @supports not selector(:focus-visible) {
   .submit:focus {
     background-color: #F86310;
@@ -253,5 +258,9 @@
 
   .submit {
     font-size: 16px;
+  }
+
+  .error {
+    font-size: 14px;
   }
 }

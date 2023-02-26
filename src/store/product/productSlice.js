@@ -5,6 +5,7 @@ import { API_URI, POSTFIX } from '../../const';
 а также error, содержащий ошибку, если есть*/
 const initialState = {
   products: [],
+  emptyProduct: false,
   error: '',
 };
 
@@ -43,10 +44,12 @@ const productSlice = createSlice({
     builder
       .addCase(productRequestAsync.pending, state => {
         state.error = '';
+        state.emptyProduct = false;
       })
       .addCase(productRequestAsync.fulfilled, (state, action) => {
         state.error = '';
         state.products = action.payload;
+        state.emptyProduct = true;
       })
       .addCase(productRequestAsync.rejected, (state, action) => {
         state.error = action.payload.error;

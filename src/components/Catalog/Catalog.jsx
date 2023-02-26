@@ -12,7 +12,7 @@ import style from './Catalog.module.css';
 export const Catalog = () => {
   /* Воспользуемся диструктуризацией и достанем наш state products, который мы сформировали в store product (смотри файл index.js ->
     store -> reducer -> product). С категорией аналогично. Они нам нужны для отображения каких именно товаров в каталоге*/
-  const { products } = useSelector(state => state.product);
+  const { products, emptyProduct } = useSelector(state => state.product);
   const { category, activeCategory } = useSelector(state => state.category);
 
   /* Необходимо выполнить запрос, чтобы у нас отображались продукты в каталоге. Для этого сразу создаем диспатч.
@@ -48,9 +48,10 @@ export const Catalog = () => {
               )) }
             </ul>
             ) : (
-              <p className={ style.empty }>
+              emptyProduct && (<p className={ style.empty }>
                 К сожалению товаров данной категории нет.
               </p>
+              )
             )}
 
           </div>
