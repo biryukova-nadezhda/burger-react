@@ -1,7 +1,9 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import categoryReducer from './category/categorySlice.js';
 import productReducer from './product/productSlice.js';
 import orderReducer, { localStorageMiddleware } from './order/orderSlice.js';
+import modalReducer from './modalDelivery/modalDeliverySlice.js';
+import formDeliveryReducer from './formDelivery/formDeliverySlice.js';
 
 /* Формируем хранилище, store, с данными, которыми смогут пользоваться любые компоненты, расположенные внутри
 Provider в файле App.jsx
@@ -13,6 +15,8 @@ export const store = configureStore({
     category: categoryReducer,
     product: productReducer,
     order: orderReducer,
+    modal: modalReducer,
+    formDelivery: formDeliveryReducer,
   },
 
   middleware: getDefaultMiddleware => {
