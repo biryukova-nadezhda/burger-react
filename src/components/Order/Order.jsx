@@ -51,7 +51,7 @@ export const Order = () => {
               >Оформить заказ</button>
 
               <div className={ style.apeal }>
-                <p className={ style.text }>Бесплатная доставка</p>
+                { totalPrice >= 599 ? (<p className={ style.text }>Бесплатная доставка</p>) : '' }
                 <button className={ style.close }>Свернуть</button>
               </div>
             </div>
