@@ -49,7 +49,7 @@ export const Footer = () => {
           <div className={ style.development }>
             <p>© YouMeal, 2022</p>
             <p>Design: <a href='#'>Anastasia Ilina</a></p>
-            <p>Developer: <a href='mailto:maksim.leskin@methed.ru'>Maksim Leskin</a></p>
+            <p>Developer: <a href='https://t.me/BirukovaNadzeya'>Nadzeya Birukova</a></p>
           </div>
         </div>
       </Container>
