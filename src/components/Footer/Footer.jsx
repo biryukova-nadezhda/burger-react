@@ -47,7 +47,7 @@ export const Footer = () => {
           </address>
 
           <div className={ style.development }>
-            <p>© YouMeal, 2022</p>
+            <p>© YouMeal, 2023</p>
             <p>Design: <a href='#'>Anastasia Ilina</a></p>
             <p>Developer: <a href='https://t.me/BirukovaNadzeya'>Nadzeya Birukova</a></p>
           </div>
